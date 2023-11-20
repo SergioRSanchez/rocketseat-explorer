@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: #BFD7E4;
+}
+
+header {
+  background: #293241;
+  height: 29.0625rem;
+  margin: auto;
+  text-align: center;
+}
+
+header h1 {
+  text-transform: uppercase;
+  color: #FFF;
+
+  font-family: 'Staatliches', sans-serif;
+  font-size: 2.25rem;
+
+  padding-top: 6.69rem;
+}
+
+header p {
+  color: #FFF;
+  height: 2.775rem;
+}
+
+header img {
+  margin-bottom: 2rem;
+}
+
+header .top-header {
+  border-radius: 1.25rem 1.25rem 0rem 0rem;
+  background: #F67669;
+  width: 46.875rem;
+  height: 8.2rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .top-header span {
+  color: #FFF;
+
+  font-family: 'Staatliches', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+}
+
+form {
+  width: 46.875rem;
+  height: 67.1875rem;
+
+  /* padding: 1.98rem 4rem 4rem; */
+
+  margin: auto;
+  border-radius: 0rem 0rem 1.25rem 1.25rem;
+  background: #FFF;
+}
+
+.personal-data {
+  display: flex;
+  
+}
+
+.personal-fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+input {
+  border: 1px solid var(--back-lines-in-white, #E6E6F0);
+  background: #FAFAFC;
+}
