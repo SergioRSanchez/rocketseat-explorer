@@ -25,14 +25,63 @@
   <form>
       <fieldset class="personal-fieldset">
         <div class="personal-data">
-          <label for="name">Nome</label>
-          <input type="text" id="name">
+          <div class="name">
+            <label for="name">Nome</label>
+            <input type="text" id="name">
+          </div>
+          <div class="last-name">
+            <label for="last-name">Sobrenome</label>
+            <input type="text" id="last-name">
+          </div>
           
-          <label for="last-name">Sobrenome</label>
-          <input type="text" id="last-name">
+        </div>
+        <label for="email">Email <span>(digite um email válido)</span></label>
+        <input type="email" id="email">
+      </fieldset>
+      
+      <h2>Informações do mentor</h2>
+      
+      <div id="line"></div>
+
+      <fieldset class="mentor">
+        <label for="mentor">Selecione quem foi seu mentor</label>
+        <input type="text" id="mentor">
+      </fieldset>
+
+      <fieldset class="feedback">
+        <label for="feedback">Feedback sobre o mentor</label>
+        <input type="text" name="feedback" id="feedback">
+      </fieldset>
+
+      <fieldset class="doubts">
+        <input type="checkbox" name="doubts" id="doubts">
+        <label for="doubts">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+      </fieldset>
+
+      <h2>Agendando próxima mentoria</h2>
+
+      <div id="line"></div>
+
+      <fieldset class="date-section">
+        <div class="date">
+          <label for="date">Data <span>(DD/MM/AAAA)</span></label>
+          <input type="date" name="date" id="date">
         </div>
 
+        <div class="time">
+          <div class="start">
+            <label for="start">Das</label>
+            <input type="time" name="start" id="start">
+          </div>
+          <div class="finish">
+            <label for="finish">Até</label>
+            <input type="time" name="finish" id="finish">
+          </div>
+
+        </div>
       </fieldset>
+
+      <button type="submit">Salvar</button>
   </form>
 </body>
 </html>

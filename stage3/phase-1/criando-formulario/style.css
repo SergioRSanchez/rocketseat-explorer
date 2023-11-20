@@ -55,28 +55,132 @@ header .top-header span {
 }
 
 form {
-  width: 46.875rem;
-  height: 67.1875rem;
-
-  /* padding: 1.98rem 4rem 4rem; */
+  width: fit-content;
+  padding: 1.98rem 3.9rem 4rem;
 
   margin: auto;
+  margin-bottom: 2rem;
   border-radius: 0rem 0rem 1.25rem 1.25rem;
   background: #FFF;
 }
 
 .personal-data {
   display: flex;
-  
+  gap: 1.37rem;
+  margin-bottom: .99rem;
 }
 
-.personal-fieldset {
+.name, 
+.last-name,
+.personal-fieldset,
+.mentor,
+.feedback,
+.date,
+.start,
+.finish {
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
 
+fieldset {
+  border: none;
+}
+
+.name input,
+.last-name input,
+.mentor input,
+.date input {
+  width: 18.75rem;
+}
+
 input {
-  border: 1px solid var(--back-lines-in-white, #E6E6F0);
+  border-radius: 0.5rem;
+  border: 1px solid #E6E6F0;
   background: #FAFAFC;
+  height: 3.47056rem;
+}
+
+label {
+  color: #4E4958;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+label span {
+  color: #C1BCCC;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  margin-left: .4rem;
+}
+
+h2 {
+  color: #253B51;
+  text-align: center;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  margin-top: 1.98rem;
+  margin-bottom: .5rem;
+}
+
+#line {
+  width: 38.875rem;
+  border: 1px solid #E6E6F0;
+  margin-bottom: 1.98rem;
+}
+
+.mentor {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.98rem;
+}
+
+.feedback input {
+  height: 10.41163rem;
+}
+
+.doubts {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.date-section {
+  display: flex;
+  gap: 2rem;
+}
+
+.time {
+  display: flex;
+  gap: .63rem;
+}
+
+.start input,
+.finish input {
+  width: 8.75rem;
+}
+
+button {
+  border-radius: 0.5rem;
+  background: #F67669;
+  display: flex;
+  width: 38.875rem;
+  height: 3.1875rem;
+  padding: 0.9375rem 2.5rem;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
+  color: #FFF;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  
+  cursor: pointer;
+  margin-top: 3.98rem;
+}
+
+button:hover {
+  background: #db5c4e;
 }
