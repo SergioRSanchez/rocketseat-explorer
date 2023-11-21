@@ -99,6 +99,8 @@ input {
   border: 1px solid #E6E6F0;
   background: #FAFAFC;
   height: 3.47056rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 label {
@@ -136,8 +138,16 @@ h2 {
   margin-bottom: 1.98rem;
 }
 
-.feedback input {
+.feedback textarea {
   height: 10.41163rem;
+  border-radius: 0.5rem;
+  border: 1px solid #E6E6F0;
+  background: #FAFAFC;
+  width: 100%;
+  resize: none;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 .doubts {
