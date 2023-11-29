@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12.25rem 14.125rem 11.75rem 14.5625rem;
+  width: 100%;
+}
+
+main h1 {
+  color: #323238;
+
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 7.88538rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.controls {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.controls img {
+  height: 3rem;
+  width: 3rem;
+}
+
+/* .icons {
+  display: grid;
+  grid-template-areas: 
+    "A B"
+    "C D";
+  gap: 2rem;
+} */
+
+.icons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 20rem;
+}
