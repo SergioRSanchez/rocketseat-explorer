@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
+  border-radius: 0.3125rem;
+  background: #FFF;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+  padding: 3rem 4rem 4rem 4rem;
+  text-align: center;
+}
+
+h1 {
+  color: #34355B;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  color: #34355B;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9375rem;
+  margin-top: .8rem;
+  margin-bottom: 1.65rem;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#screen2 h1,
+#screen2 p {
+  width: 18.5625rem;
+}
+
+#screen2 p {
+  color: #000;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+
+  display: flex;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  background: #E4EDF1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#screen2 img {
+  padding: 2.7rem 0 2.65rem 0;
+}
+
+#screen2 button {
+  border-radius: 0.25rem;
+  background: #FF9500;
+  padding: 1rem;
+  display: block;
+  margin: 0 auto;
+  color: #FFF;
+
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+
+  transition: background .3s
+}
+
+#screen2 button:hover {
+  background: #d17c06;
+}
+
+.hide {
+  display: none;
+}
+
+#screen1 img:hover {
+  animation: shake 0.82s infinite;
+}
+
+#screen2 p {
+  animation: appear 1s forwards;
+  transform: translateY(10rem) scale(.1);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(10rem) scale(.1) opacity(0);
+
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+		animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+  }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
