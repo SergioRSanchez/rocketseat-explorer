@@ -1,23 +1,24 @@
 import * as elements from './elements.js';
+import * as actions from './actions.js'
 
 export function registerControls() {
   elements.controls.addEventListener('click', (event) => {
     const action = event.target.dataset.action
-    if (action === undefined) {
+    if (typeof actions[action]() != "function") {
       return
     }
 
-    console.log(action)
+    actions[action]()
   })
 }
 
 export function registerSounds() {
   elements.sounds.addEventListener('click', (event) => {
     const sound = event.target.dataset.sound
-    if (sound === undefined) {
+    if (typeof actions[sound]() != "function") {
       return
     }
 
-    console.log(sound)
+    actions[sound]()
   })
 }
