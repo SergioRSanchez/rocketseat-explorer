@@ -1,4 +1,2 @@
-export const controls = document.querySelector('.controls')
-
-export const minutes = document.querySelector('.minutes')
-export const seconds = document.querySelector('.seconds')
+export const controls = document.getElementById('controls')
+export const sounds = document.getElementById('sounds')

@@ -32,28 +32,37 @@ main .time {
   display: flex;
 }
 
-.controls {
+#controls {
   display: flex;
   gap: 2.5rem;
   margin-top: 1rem;
 }
 
-.controls img {
+#controls img {
   height: 3rem;
   width: 3rem;
 }
 
-.controls a svg {
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#controls button svg {
   height: 3rem;
   width: 3rem;
   fill: var(--text-default);
 }
 
-.controls a.running svg {
+#controls button.running svg {
   fill: var(--bg-active);
 }
 
-.icons {
+#sounds {
   display: grid;
   grid-template-areas: 
     "A B"
@@ -61,16 +70,11 @@ main .time {
   gap: 2rem;
 }
 
-.icons {
+#sounds {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   width: 20rem;
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none;
 }
 
 svg {
@@ -81,20 +85,31 @@ svg:hover {
   scale: 1.1;
 }
 
-a svg {
+button svg {
   fill: var(--bg-default);
 }
 
-a.active svg {
+button.active svg {
   fill: var(--bg-active);
 }
 
-a svg path + path {
+button svg path + path {
   fill: var(--text-default)
 }
 
-a.active svg path + path {
+button.active svg path + path {
   fill: var(--text-active)
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
 }
 
 @media screen and (min-width: 520px) {
