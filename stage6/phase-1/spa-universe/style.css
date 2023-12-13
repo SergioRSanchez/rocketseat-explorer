@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --platform-aliases-title: #E1E1E6;
+  --platform-aliases-text-base: #C4C4CC;
+  --platform-aliases-text-apoio: #8D8D99;
+  --neutral-colors-white: #FFFFFF;
+}
+
+body,
+button {
+  font-family: 'Roboto', sans-serif;
+  color: var(--platform-aliases-title);
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  padding: 2.5rem 4.5rem;
+  align-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+nav a {  
+  font-size: 1.35419rem;
+  line-height: 1.35419rem;
+  color: var(--platform-aliases-text-apoio);
+  margin: 0 0.68rem;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+a:hover {
+  font-size: 1.5rem;
+  color: var(--neutral-colors-white);
+  font-weight: 700;
+}
