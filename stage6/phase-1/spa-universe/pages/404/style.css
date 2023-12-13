@@ -1,0 +1,33 @@
+:root {
+  --platform-aliases-title: #E1E1E6;
+  --platform-aliases-text-base: #C4C4CC;
+  --platform-aliases-text-apoio: #8D8D99;
+  --neutral-colors-white: #FFFFFF;
+}
+
+#notFound {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: calc(11rem + 7.5rem);
+
+  background-image: url('../../assets/bg-home.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  color: var(--platform-aliases-title);
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 125%;
+}
+
+span {
+  color: var(--platform-aliases-text-base);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 125%;
+}
