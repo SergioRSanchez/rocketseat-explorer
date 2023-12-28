@@ -16,7 +16,7 @@ class UserController {
 
     const hashedPassword = await hash(password, 8);
 
-    await database.run("INSERT INTO users (name, email, password) VALUES (?, ?, ?)", [name, email, password]);
+    await database.run("INSERT INTO users (name, email, password) VALUES (?, ?, ?)", [name, email, hashedPassword]);
 
     return res.status(201).json();
   }
@@ -35,7 +35,7 @@ class UserController {
     const userWithUpdatedEmail = await database.get("SELECT * FROM users WHERE email = (?)", [email]);
 
     if (userWithUpdatedEmail && userWithUpdatedEmail.id !== user.id) {
-      throw new AppError("Este e-mail está em uso");
+      throw new AppError("Este e-mail já está em uso");
     }
 
     user.name = name ?? user.name;
