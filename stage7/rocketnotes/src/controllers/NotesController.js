@@ -50,7 +50,7 @@ class NotesController {
   async delete(request, response) {
     const { id } = request.params
 
-    await knex('notes').where({ id }).delete()
+    await knex("notes").where({ id }).delete()
 
     return response.json()
   }
@@ -74,11 +74,12 @@ class NotesController {
         .whereIn("name", filterTags)
         .innerJoin("notes", "notes.id", "tags.note_id")
         .orderBy("notes.title")
+
     } else {
       notes = await knex("notes")
         .where({ user_id })
         .whereLike("title", `%${title}%`)
-        .orderBy("created_at", "desc")
+        .orderBy("title")
     }
 
     const userTags = await knex("tags").where({ user_id })
@@ -91,10 +92,8 @@ class NotesController {
       }
     })
 
-
     return response.json(notesWithTags)
   }
-
 }
 
 module.exports = NotesController
