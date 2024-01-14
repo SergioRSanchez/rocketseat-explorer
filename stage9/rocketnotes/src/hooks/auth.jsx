@@ -28,7 +28,7 @@ function AuthProvider({ children }) {
       if (error.response) {
         alert(error.response.data.message);
       } else {
-        alert("Não foi possível conectar ao servidor");
+        alert("Não foi possível conectar ao servidor.");
       }
     }
   }
@@ -38,6 +38,24 @@ function AuthProvider({ children }) {
     localStorage.removeItem("@rocketnotes:token");
 
     setData({});
+  }
+
+  async function updateProfile({ user }) {
+    try {
+      const { password, old_password, ...userData } = user;
+
+      await api.put("/users", user);
+      localStorage.setItem("@rocketnotes:user", JSON.stringify(userData));
+      setData({ user: userData, token: data.token });
+      alert("Perfil atualizado!")
+
+    } catch (error) {
+      if (error.response) {
+        alert(error.response.data.message);
+      } else {
+        alert("Não foi possível atualizar o perfil.")
+      }
+    }
   }
 
   useEffect(() => {
@@ -57,6 +75,7 @@ function AuthProvider({ children }) {
       value={{
         signIn,
         signOut,
+        updateProfile,
         user: data.user
       }}
     >
