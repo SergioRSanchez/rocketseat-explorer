@@ -23,8 +23,8 @@ export function New() {
     setNewLink("");
   }
 
-  function handleRemoveLink(deleted) {
-    setLinks(prevState => prevState.filter(link => link !== deleted))
+  function handleRemoveLink(linkDeleted) {
+    setLinks(prevState => prevState.filter(link => link !== linkDeleted))
   }
 
   function handleAddTag() {
@@ -32,8 +32,8 @@ export function New() {
     setNewTag("");
   }
 
-  function handleRemoveTag(deleted) {
-    setTags(prevState => prevState.filter(tag => tag !== deleted))
+  function handleRemoveTag(tagDeleted) {
+    setTags(prevState => prevState.filter(tag => tag !== tagDeleted))
   }
 
   return (
