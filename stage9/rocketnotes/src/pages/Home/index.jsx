@@ -13,6 +13,9 @@ import { Note } from '../../components/Note';
 import { Container, Brand, Menu, Search, Content, NewNote } from './styles';
 
 export function Home() {
+  const [notes, setNotes] = useState([]);
+  const [search, setSearch] = useState("");
+
   const [tags, setTags] = useState([]);
   const [tagsSelected, setTagsSelected] = useState([]);
 
@@ -35,6 +38,15 @@ export function Home() {
 
     fetchTags();
   }, []);
+
+  useEffect(() => {
+    async function fetchNotes() {
+      const response = await api.get(`/notes?title=${search}&tags=${tagsSelected}`);
+      setNotes(response.data)
+    }
+
+    fetchNotes();
+  }, [tagsSelected, search]);
 
   return (
     <Container>
@@ -66,20 +78,23 @@ export function Home() {
       </Menu>
 
       <Search>
-        <Input placeholder="Pesquisar pelo título" icon={FiSearch} />
+        <Input
+          placeholder="Pesquisar pelo título"
+          icon={FiSearch}
+          onChange={e => setSearch(e.target.value)}
+        />
       </Search>
 
       <Content>
         <Section title="Minhas notas">
-          <Note
-            data={{
-              title: "React Modal",
-              tags: [
-                { id: "1", name: "react" },
-                { id: "2", name: "rocketseat" }
-              ],
-            }}
-          />
+          {
+            notes && notes.map(note => (
+              <Note
+                key={String(note.id)}
+                data={note}
+              />
+            ))
+          }
         </Section>
       </Content>
 
