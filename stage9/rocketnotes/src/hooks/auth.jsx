@@ -71,7 +71,6 @@ function AuthProvider({ children }) {
     const token = localStorage.getItem("@rocketnotes:token");
 
     if (token && user) {
-      // api.defaults.headers.authorization = `Bearer ${token}`;
       api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
       setData({ user: JSON.parse(user), token });
