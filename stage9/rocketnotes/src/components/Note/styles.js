@@ -22,5 +22,11 @@ export const Container = styled.button`
     width: 100%;
     display: flex;
     margin-top: 24px;
+
+    flex-wrap: wrap;
+    
+
+    gap: 6px;
+    
   }
 `;
