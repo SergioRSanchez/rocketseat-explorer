@@ -7,7 +7,7 @@ export const Container = styled.button`
   border: none;
   border-radius: 10px;
 
-  padding: 22px;
+  padding: 22px 22px 16px;
   margin-bottom: 16px;
 
   > h1 {
@@ -24,9 +24,5 @@ export const Container = styled.button`
     margin-top: 24px;
 
     flex-wrap: wrap;
-    
-
-    gap: 6px;
-    
   }
 `;
