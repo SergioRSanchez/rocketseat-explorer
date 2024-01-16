@@ -1,4 +1,5 @@
 import { RiShutDownLine } from 'react-icons/ri';
+import { useNavigate } from 'react-router-dom';
 
 import { useAuth } from '../../hooks/auth';
 import { api } from '../../services/api';
@@ -9,6 +10,13 @@ import { Container, Profile, Logout } from './styles';
 
 export function Header() {
   const { user, signOut } = useAuth();
+  const navigate = useNavigate();
+
+  function handleSignOut() {
+    navigate('/');
+
+    signOut();
+  }
 
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
@@ -26,7 +34,7 @@ export function Header() {
         </div>
       </Profile>
 
-      <Logout onClick={signOut}>
+      <Logout onClick={handleSignOut}>
         <RiShutDownLine />
       </Logout>
     </Container>
