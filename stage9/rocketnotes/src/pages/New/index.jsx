@@ -49,6 +49,18 @@ export function New() {
       return alert("Digite o título da nota.")
     }
 
+    // if (!description) {
+    //   return alert("Digite uma observação para nota.")
+    // }
+
+    if (!newLink && links.length === 0) {
+      return alert("Digite um link para nota.")
+    }
+
+    if (!newTag && tags.length === 0) {
+      return alert("Digite uma tag para nota.")
+    }
+
     if (newLink) {
       return alert("Você deixou um link no campo para adicionar, mas não confirmou. Clique para confirmar ou deixa o campo vazio")
     }
