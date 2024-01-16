@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import { api } from '../../services/api';
 
@@ -16,6 +16,11 @@ export function Details() {
   const [data, setData] = useState(null);
 
   const params = useParams();
+  const navigate = useNavigate();
+
+  function handleBack() {
+    navigate('/');
+  };
 
   useEffect(() => {
     async function fetchNote() {
@@ -73,6 +78,7 @@ export function Details() {
 
             <Button
               title="Voltar"
+              onClick={handleBack}
             />
           </Content>
         </main>
